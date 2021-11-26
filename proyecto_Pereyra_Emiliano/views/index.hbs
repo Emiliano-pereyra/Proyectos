@@ -1,0 +1,191 @@
+<!--Nav Bar-->
+<header class="header" id="inicio"></header>
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">Siroppo</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-link" aria-current="page" href="#inicio">Iniciar Sesion</a>
+                <div class="sabores">
+                    <a class="nav-link" href="#novedades">Novedades</a>
+                </div>
+                <div class="sabores">
+                    <a class="nav-link" href="#sabores">Sabores</a>
+                </div>
+                <div class="sabores">
+                    <a class="nav-link" href="#ubicacion">Ubicación</a>
+                </div>
+                <div class="sabores">
+                    <a class="nav-link" href="#contactanos">Contacto</a>
+                </div>
+            </div>
+        </div>
+</nav>
+<div class="container-fluid">
+    <div id="home" class=" row align-center hero">
+        <div class="col-lg-3 offset-lg-8">
+            <div class="head">
+                <h1 class="titulo">Venta de helados</h1>
+                <p class="copy">Delivery solo por aplicación</p>
+            </div>
+        </div>
+    </div>
+</div>
+</header>
+<!--inicio noticias-->
+<div class="noticias" id="novedades" class="row py-4">
+    <div class="col-md-4 offset-md-1 py-8">
+        <h2>Ultimas Noticias</h2>
+        <ul class="noti-info">
+            <li><a href="#novedades"><img src="images/fotos/helados.jpeg">Se aproximan los nuevos sabores del verano</a>
+            </li>
+            <li><a href="#novedades"><img src="images/fotos/helados.jpeg">Estén atentos a 2 nuevos sabores del verano</a>
+            </li>
+            <li><a href="#novedades"><img src="images/fotos/helados.jpeg">Aprovechen que se termina el crema bailys</a>
+            </li>
+            <li><a href="#novedades"><img src="images/fotos/helados.jpeg">Es el fin del chocolante blanco con oreo</a>
+            </li>
+            <div id="novedades" class="row py-4">
+                <ul class="lista-novedades">
+                    {{#each novedades}}
+                    <li>
+                        <a href="javascript:void(0);" data-toggle="modal" data-target="#modal{{id}}">
+                            <img src="{{imagen}}" width="120">{{titulo}}
+                        </a>
+                    </li>
+                    {{/each}}
+                </ul>
+                <div class="modal-body">
+                    <h2>{{subtitulo}}</h2>
+                    <img src="{{imagen}}">
+                    <p>{{cuerpo}}</p>
+                </div>
+            </div>
+            {{#each novedades}}
+            <!--inicia modal-->
+            <div class="modal fade" id="modal{{id}}" data-backdrop="static" data-keyboard="false" tabindex="-1"
+                aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="moal-dialog modal-dialog-centered modal-dialog-scrollable">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="staticBackdropLabel">{{titulo}}</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <h2>{{subtitulo}}</h2>
+                            <img src="{{imagen}}" alt="{{titulo}}" />
+                            <p>{{cuerpo}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--fin modal-->
+            {{/each}}
+        </ul>
+    </div>
+</div>
+<div class="sabor" id="sabores">
+    <h2>Sabores</h2>
+    <br>
+    <table id="tabla" style="width: 100%">
+        <tr>
+            <td>Frutilla</td>
+            <td>Frutilla a la crema</td>
+            <td>Frutilla a la reina</td>
+        </tr>
+        <tr>
+            <td>chocolate</td>
+            <td>vainilla</td>
+            <td>crema americana</td>
+        </tr>
+        <tr>
+            <td>Menta granizada</td>
+            <td>tramontana</td>
+            <td>cereza a la crema</td>
+        </tr>
+        <tr>
+            <td>Anana</td>
+            <td>Granizado</td>
+            <td>Chocolate con almendras</td>
+        </tr>
+        <tr>
+            <td>Crema Flan</td>
+            <td>Tiramisu</td>
+            <td>Naranja-Mango</td>
+        </tr>
+    </table>
+</div>
+<!--por motivos obvios pongo nada mas 15 gustos-->
+
+<!--fin noticias-->
+<!--inicio ubicacion y contacto-->
+<div class="elementos">
+    <div id="ubicacion" class="row py-4">
+        <div class="col-md-4 offset-md-2">
+            <h2>Ubicación</h2>
+            <div class="embed-responsive embed-responsive-16by9">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3282.3716251635396!2d-58.7918503847692!3d-34.64531658044875!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bc9451ee4ba9e5%3A0x5e93001438dfb108!2sAv.%20del%20Libertador%20407%2C%20B1744AAE%20Moreno%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1636642880919!5m2!1ses!2sar"
+                    width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+        <!--ubicacion-->
+    </div>
+    <div class="formulario" style="position:relative;left: 6">
+        <div class="col-md-4 mt-4 mt-sm-0">
+            <h2>Envianos un mensaje</h2>
+            <form action="/" method="post">
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="Nombre">Nombre</label>
+                        <input type="text" class="form-control" id="Nombre" placeholder="..." name="Nombre">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="Apellido">Apellido</label>
+                        <input type="text" class="form-control" id="Apellido" placeholder="..." name="Apellido">
+                    </div>
+                    <div class="form-group">
+                        <label for="Email">Email</label>
+                        <input type="email" class="form-control" id="Email" placeholder="..." name="Email">
+                    </div>
+                    <div class="form-group">
+                        <label for="Telefono">Telefono</label>
+                        <input type="text" class="form-control" id="Telefono" placeholder="..." name="Telefono">
+                    </div>
+                    <div class="form-group">
+                        <label for="Consulta">Consulta</label>
+                        <textarea class="form-control" id="Consulta" rows="4" name="Consulta"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Enviar consulta</button>
+                </div>
+            </form>
+            <p>{{message}}</p>
+        </div>
+        <!--consulta-->
+    </div>
+</div>
+<footer id="contactanos">
+    <!--logo instagram y link-->
+    <div class="contenedor footer-cont">
+        <div class="contactanos">
+            <h2 class="brand">Siroppo helados</h2>
+            <p>Vení y probá nuestros helados!!!!!!!!!</p>
+        </div>
+        <div class="red-social">
+            <a href="https://www.instagram.com/siroppohelados/" class="icono-red-social">
+                <i class='bx bxl-instagram'></i>
+
+            </a>
+        </div>
+    </div>
+    <div class="line"></div>
+</footer>
+
+
+</div>

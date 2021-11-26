@@ -1,0 +1,170 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesheet.css">
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script>
+        var scroll = new SmoothScroll('a[href*="#"]');
+    </script>
+    <title>Siroppo</title>
+</head>
+
+<body>
+    <!--Nav Bar-->
+    <header class="header" id="inicio"></header>
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Siroppo</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link active" aria-current="page" href="#inicio">Inicio</a>
+                    <div class="sabores">
+                        <a class="nav-link" href="#noticias">Novedades</a>
+                    </div>
+                    <div class="sabores">
+                        <a class="nav-link" href="#sabores">Sabores</a>
+                    </div>
+                    <div class="sabores">
+                        <a class="nav-link" href="#ubicacion">Ubicación</a>
+                    </div>
+                    <div class="sabores">
+                        <a class="nav-link" href="#Contactanos">Contacto</a>
+                    </div>
+                </div>
+            </div>
+    </nav>
+    <div class="container-fluid">
+        <div id="home" class=" row align-center hero">
+            <div class="col-lg-3 offset-lg-8">
+                <div class="head">
+                    <h1 class="titulo">Venta de helados</h1>
+                    <p class="copy">Delivery solo por aplicación</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    </header>
+    <!--inicio noticias-->
+    <div class="noticias" id="noticias" class="row py-4">
+        <div class="col-md-4 offset-md-1 py-8">
+                <h2>Ultimas Noticias</h2>
+                <ul class="noti-info">
+                    <li><a href="#"><img src="fotos/helados.jpeg">Se aproximan los nuevos sabores del verano</a></li>
+                    <li><a href="#"><img src="fotos/helados.jpeg">Estén atentos a 2 nuevos sabores del verano</a></li>
+                    <li><a href="#"><img src="fotos/helados.jpeg">Aprovechen que se termina el crema bailys</a></li>
+                    <li><a href="#"><img src="fotos/helados.jpeg">Es el fin del chocolante blanco con oreo</a></li>
+                </ul> 
+        </div>
+    </div>
+    <div class="sabor" id="sabores">
+        <h2>Sabores</h2>
+        <br>
+        <table id="tabla" style="width: 100%">
+            <tr>
+            <td>Frutilla</td>
+            <td>Frutilla a la crema</td>
+            <td>Frutilla a la reina</td>
+        </tr>
+        <tr>
+            <td>chocolate</td>
+            <td>vainilla</td>
+            <td>crema americana</td>
+        </tr>
+        <tr>
+            <td>Menta granizada</td>
+            <td>tramontana</td>
+            <td>cereza a la crema</td>
+        </tr>
+        <tr>
+            <td>Anana</td>
+            <td>Granizado</td>
+            <td>Chocolate con almendras</td>
+        </tr>
+        <tr>
+            <td>Crema Flan</td>
+            <td>Tiramisu</td>
+            <td>Naranja-Mango</td>
+        </tr>
+    </table>
+    </div> <!--por motivos obvios pongo nada mas 15 gustos-->
+    
+    <!--fin noticias-->
+    <!--inicio ubicacion y contacto-->
+    <div class="elementos">
+        <div id="ubicacion" class="row py-4">
+            <div class="col-md-4 offset-md-2">
+                <h2>Ubicación</h2>
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3282.3716251635396!2d-58.7918503847692!3d-34.64531658044875!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bc9451ee4ba9e5%3A0x5e93001438dfb108!2sAv.%20del%20Libertador%20407%2C%20B1744AAE%20Moreno%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1636642880919!5m2!1ses!2sar"
+                        width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+            <!--ubicacion-->
+        </div>
+        <div class="formulario" style="position:relative;left: 6">
+            <div class="col-md-4 mt-4 mt-sm-0">
+                <h2>Envianos un mensaje</h2>
+                <form>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="nombre">Nombre</label>
+                            <input type="text" class="form-control" id="nombre" placeholder="...">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="apellido">Apellido</label>
+                            <input type="text" class="form-control" id="apellido" placeholder="...">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" class="form-control" id="email" placeholder="...">
+                        </div>
+                        <div class="form-group">
+                            <label for="tel">Tel</label>
+                            <input type="text" class="form-control" id="tel" placeholder="...">
+                        </div>
+                        <div class="form-group">
+                            <label for="consulta">Consulta</label>
+                            <textarea class="form-control" id="consulta" rows="4"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Enviar consulta</button>
+                    </div>
+                </form>
+            </div>
+            <!--consulta-->
+        </div>
+    </div>
+    <footer id="contacto"> <!--logo instagram y link-->
+        <div class="contenedor footer-cont"> 
+            <div class="contactanos">
+                <h2 class="brand">Siroppo helados</h2>
+                <p>Vení y probá nuestros helados!!!!!!!!!</p>
+            </div>
+            <div class="red-social">
+                <a href="https://www.instagram.com/siroppohelados/" class="icono-red-social">
+                    <i class='bx bxl-instagram'></i>
+                    
+                </a>
+            </div>
+        </div>
+        <div class="line"></div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+        integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+        integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
