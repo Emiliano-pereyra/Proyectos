@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1:3306
--- Tiempo de generación: 23-11-2021 a las 20:35:58
+-- Tiempo de generación: 30-11-2021 a las 23:47:12
 -- Versión del servidor: 5.7.31
 -- Versión de PHP: 7.3.21
 
@@ -35,14 +35,16 @@ CREATE TABLE IF NOT EXISTS `novedades` (
   `img_id` varchar(250) DEFAULT NULL,
   `cuerpo` text NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=16 DEFAULT CHARSET=utf8;
 
 --
 -- Volcado de datos para la tabla `novedades`
 --
 
 INSERT INTO `novedades` (`id`, `titulo`, `subtitulo`, `img_id`, `cuerpo`) VALUES
-(7, 'Nueva sucursal Moreno', '1234', '', '123');
+(15, 'pedro', 'pepe', 'twru11wmdiqhowng5o6w', 'pipo'),
+(13, 'Nueva sucursal Moreno', 'dsa', 'axm9quplzdfxjf8i28sc', 'asd'),
+(14, 'treinta', 'tre', 'zpifn0748pymwwuy4ax5', 'rte');
 
 -- --------------------------------------------------------
 

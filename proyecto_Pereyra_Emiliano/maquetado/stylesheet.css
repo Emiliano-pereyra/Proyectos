@@ -7,7 +7,7 @@ h2{
     text-align: justify;
 }
 p{
-    color: orange;
+    color: rgb(194, 126, 1);
 }
 .hero{
     height: 100vh;
@@ -165,3 +165,4 @@ td{
 .sabor h2{
     text-align: center;
 }
+

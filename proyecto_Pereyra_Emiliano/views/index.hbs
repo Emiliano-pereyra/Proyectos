@@ -9,7 +9,7 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-                <a class="nav-link" aria-current="page" href="#inicio">Iniciar Sesion</a>
+
                 <div class="sabores">
                     <a class="nav-link" href="#novedades">Novedades</a>
                 </div>
@@ -41,65 +41,52 @@
     <div class="col-md-4 offset-md-1 py-8">
         <h2>Ultimas Noticias</h2>
         <ul class="noti-info">
-            <li><a href="#novedades"><img src="images/fotos/helados.jpeg">Se aproximan los nuevos sabores del verano</a>
-            </li>
-            <li><a href="#novedades"><img src="images/fotos/helados.jpeg">Estén atentos a 2 nuevos sabores del verano</a>
-            </li>
-            <li><a href="#novedades"><img src="images/fotos/helados.jpeg">Aprovechen que se termina el crema bailys</a>
-            </li>
-            <li><a href="#novedades"><img src="images/fotos/helados.jpeg">Es el fin del chocolante blanco con oreo</a>
-            </li>
-            <div id="novedades" class="row py-4">
-                <ul class="lista-novedades">
-                    {{#each novedades}}
-                    <li>
-                        <a href="javascript:void(0);" data-toggle="modal" data-target="#modal{{id}}">
-                            <img src="{{imagen}}" width="120">{{titulo}}
-                        </a>
-                    </li>
-                    {{/each}}
-                </ul>
-                <div class="modal-body">
-                    <h2>{{subtitulo}}</h2>
-                    <img src="{{imagen}}">
-                    <p>{{cuerpo}}</p>
-                </div>
-            </div>
             {{#each novedades}}
-            <!--inicia modal-->
-            <div class="modal fade" id="modal{{id}}" data-backdrop="static" data-keyboard="false" tabindex="-1"
-                aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                <div class="moal-dialog modal-dialog-centered modal-dialog-scrollable">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="staticBackdropLabel">{{titulo}}</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-body">
-                            <h2>{{subtitulo}}</h2>
-                            <img src="{{imagen}}" alt="{{titulo}}" />
-                            <p>{{cuerpo}}</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!--fin modal-->
+            <li>
+                <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#modal{{ id }}">
+                    <img src="{{imagen}}">{{titulo}}
+                </a>
+            </li>
             {{/each}}
         </ul>
     </div>
+
+    {{#each novedades}}
+    <!--inicia modal-->
+    
+    <div class="modal fade" id="modal{{ id }}" data-backdrop="static" data-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title" id="staticBackdropLabel">{{titulo}}</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <h2>{{ subtitulo }}</h2>
+                    <img src="{{ imagen }}" alt="{{titulo}}"  />
+                    <p>{{ cuerpo }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--fin modal-->
+    {{/each}}
 </div>
+
+
 <div class="sabor" id="sabores">
     <h2>Sabores</h2>
     <br>
     <table id="tabla" style="width: 100%">
-        <tr>
+        <tr >
             <td>Frutilla</td>
             <td>Frutilla a la crema</td>
             <td>Frutilla a la reina</td>
         </tr>
-        <tr>
+        <tr >
             <td>chocolate</td>
             <td>vainilla</td>
             <td>crema americana</td>
@@ -109,7 +96,7 @@
             <td>tramontana</td>
             <td>cereza a la crema</td>
         </tr>
-        <tr>
+        <tr >
             <td>Anana</td>
             <td>Granizado</td>
             <td>Chocolate con almendras</td>

@@ -1,7 +1,9 @@
 <div class="container" style="margin:50px auto">
     <div class="row">
         <div class="col">
-            <p class="text-right"> Buenas {{usuario}} <a href="/admin/login/logout" class="btn btn-sm btn-danger">Cerrar Sesion <i class="fa fa-sign-out"></i></a> 
+            <p class="text-right"> Buenas {{usuario}}
+                <a href="/admin/login/logout" class="btn btn-sm btn-danger">Cerrar Sesion <i
+                        class="fa fa-sign-out"></i></a>
             </p>
         </div>
     </div>
@@ -10,9 +12,9 @@
             <h3>Lista de Novedades</h3>
         </div>
         <div class="col-2 text-right">
-              <a href="/admin/novedades/agregar" class="btn btn-success">
-    <i class="fa fa-plus"></i>Nuevo</a>
-   
+            <a href="/admin/novedades/agregar" class="btn btn-success">
+                <i class="fa fa-plus"></i>Nuevo</a>
+
         </div>
     </div>
     <div class="row">
@@ -22,7 +24,9 @@
                     <tr>
                         <th scope="col">#</th>
                         <th scope="col">Título</th>
+                        <th scope="col">Subtitulo</th>
                         <th scope="col">Imagen</th>
+                        <th scope="col">Cuerpo</th>
                         <th scope="col" class="text-center">Acciones</th>
                     </tr>
                 </thead>
@@ -31,12 +35,15 @@
                     <tr>
                         <th scope="row">{{id}}</th>
                         <th scope="row">{{titulo}}</th>
+                        <th scope="row">{{subtitulo}}</th>
                         <th scope="row">{{{imagen}}}</th>
+                        <th scope="row">{{cuerpo}}</th>
                         <td class="text-center">
-                            <a href="/admin/novedades/modificar/:id " title="Editar" class="btn btn-sm btn-secondary">
+                            <a href="/admin/novedades/modificar/{{id}} " title="Editar" class="btn btn-sm btn-secondary">
                                 <i class="fas fa-pencil-alt"></i>
                             </a>
-                            <a href="/admin/novedades/eliminar/{{id}}" title="Eliminar" class="btn btn-sm btn-secondary">
+                            <a href="/admin/novedades/eliminar/{{id}}" title="Eliminar"
+                                class="btn btn-sm btn-secondary">
                                 <i class="fa fa-trash"></i>
                             </a>
                         </td>
@@ -46,4 +53,3 @@
             </table>
         </div>
     </div>
-  

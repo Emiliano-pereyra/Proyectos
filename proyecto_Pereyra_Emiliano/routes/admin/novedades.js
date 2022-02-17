@@ -8,7 +8,7 @@ const destroy = util.promisify(cloudinary.uploader.destroy);
 
 router.get('/', async function (req, res, next) {
     var novedades = await novedadesmodel.getNovedades();
-
+    
     novedades = novedades.map(novedad => {
         if (novedad.img_id) {
             const imagen = cloudinary.image(novedad.img_id, {
@@ -50,12 +50,13 @@ router.get('/agregar', (req, res, next) => {
 });
 
 router.post('/agregar', async (req, res, next) => {
-    var img_id = '';
-    if (req.files && Object.keys(req.files).lenght > 0) {
-        imagen = req.files.imagen;
-        img_id = (await uploader(imagen.tempFilePath)).public_id;
-    }
+   
     try {
+        var img_id = '';
+        if (req.files && Object.keys(req.files).length > 0) {
+            imagen = req.files.imagen;
+            img_id = (await uploader(imagen.tempFilePath)).public_id;
+        }
         if (req.body.titulo != "" && req.body.subtitulo != "" && req.body.cuerpo != "") {
             await novedadesmodel.insertNovedad({
                 ...req.body,
@@ -90,20 +91,21 @@ router.post('/modificar', async (req, res, next) => {
     try {
         let img_id = req.body.img_original;
         let borra_img_vieja = false;
-        if (req.body.img_delete == '1') {
+        if (req.body.img_delete === '1') {
             img_id = null;
-            borrar_img_vieja = true;
+            borra_img_vieja = true;
         } else {
-            if (req.files && Object.keys(req.files).lenght > 0) {
+            if (req.files && Object.keys(req.files).length > 0) {
                 imagen = req.files.imagen;
-                img_id = (await uploader(imagen.tempFilePath)).publid_id;
+                img_id = (await 
+                uploader(imagen.tempFilePath)).public_id;
                 borra_img_vieja = true;
             }
         }
         if (borra_img_vieja && req.body.img_original) {
             await (destroy(req.body.img_original));
         }
-        var obj = {
+        let obj = {
             titulo: req.body.titulo,
             subtitulo: req.body.subtitulo,
             cuerpo: req.body.cuerpo,
