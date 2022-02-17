@@ -109,4 +109,43 @@ console.log(!(p==2)) //false, la exclamacion antes de la condicion es una negaci
  
 if (p<=2){
     console.log("esta re bien porque es verdad");
+} else{ //se usa para dar un caso contrario al condicional o mejor dicho, lo que ocurre en caso de que el condicional no se cumpla
+    console.log("boludon es mentira");
 }
+
+function clasificarValor(valor){
+            if(valor % 2==0){
+                console.log("divisible por 2");
+            }else if(valor % 3==0){ //condicion extra para el if inicial, seria una clausula extra al if inicial
+                console.log("divisible entre 3");
+            }else{
+                console.log("no es divisible entre la opciones");
+            }
+}
+clasificarValor(2);//me va a indicar true en el primer if
+clasificarValor(15);//indica true en la segunda clausula
+//toma prioridad de las clausulas en el orden que estan escritas
+
+function valor(valor){
+    var respuesta;
+    switch(valor){//switch es muy util para hacer menus
+        case 1:
+            respuesta="alpha";
+            break;
+        case 2:
+            respuesta="beta";
+            break;
+        case 3:
+            respuesta="gamma";
+            break;
+        case 4:
+            respuesta="delta";
+            break; 
+         default://es la opcion por defecto en caso de que no se seleccione ninguna de las opciones
+             respuesta="infinite";
+             break;              
+    }
+    return respuesta;//lo pongo al final porque no se incluye en la sentencia de switch
+}
+valor(1);//va a seleccionar cualquiera de los case de switch, en este ejemplo sería el 1
+
