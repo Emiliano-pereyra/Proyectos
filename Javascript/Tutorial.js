@@ -149,3 +149,103 @@ function valor(valor){
 }
 valor(1);//va a seleccionar cualquiera de los case de switch, en este ejemplo sería el 1
 
+
+function miFuncion(){
+    console.log("Hola");
+    return "Mundo";
+    console.log("adios");//como esta luego del return, no va a ser ejecutada esta linea nunca
+}
+console.log(miFuncion());//muestra como no se ejecuta la linea de "adios"
+
+
+//CREAR OBJETOS, permiten almacenar guardar una secuencia o un conjunto de propiedades que estan asignadas con sus respectivos valores
+
+var miPerro={ //para declarar al objeto utilizo var y asigno el nombre y coloco sus propiedades entre llaves
+    "nombre": "Gino",//todas las propiedades excepto la ultima se las separa por una "," al final de cada linea
+    "edad": 5,//puedo usar el numero como propiedad al escribirla al reves
+    "peso":1,
+    "raza":"caniche"
+    //estas propiedades con sus valores se las denomina objeto, es como agrupar todas en una misma estuctura de datos
+};
+console.log(miPerro.edad); //accedo a la propiedad "edad" al colocarlo de esta forma y la muestro, se le llama anotación de punto
+
+var miCuaderno={
+    "color": "verde",
+    "categoria": 3,
+    "num pag": 1999,
+    "num caratulas":20
+};
+console.log(miCuaderno["color"]);//notacion alternativa para llamar a la propiedad, obligatorio con propiedades con espacios en su nombre por ejemplo "num pag"
+
+var resultados={
+    1: "batman",
+    2: "pepe",
+    3: "puto el que lee"
+};
+var posicion=1; //otra forma de obtener el valor de la propiedad, en este caso por medio de una variable global
+console.log(resultados[posicion]);
+
+var mochila={
+    "color": "rojo",
+    "tamaño": "Grande",
+    "contenido": ["libro", "lapiz"]
+};
+
+console.log(mochila.color);//muestra rojo
+mochila.color= "negro";//actualizo el valor de la propiedad
+console.log(mochila.color);//muestra que es negro el valor actual de "color"
+mochila.contenido.push("calzon");//agregue al final del array otro valor
+mochila.marca="Nike"; //agregue la propiedad al objeto, marca es el nombre de la porpiedad y Nike su valor
+delete mochila.tamaño;//borro la propiedad del objeto, en este caso elimine "tamaño" y su valor asociado
+// si intento hacer un console.log a la propiedad eliminada el programa me devuelve "undefined"
+console.log(mochila.hasOwnProperty ("color"));//verifico si el objeto tiene la propiedad seleccionada, en este caso devuelve "true" porque lo tiene 
+
+function buscarElemento(simbolo){
+    var elementoQuimico ="";
+    var simboloQuimico={
+        "Al":"Aluminio",
+        "K":"Potasio",
+        "H":"Hidrogeno"
+    };
+    /*switch (simbolo){ // A partir del valor de simbolo  se asocia el caso correspondiente
+        case "Al":
+            elementoQuimico="Aluminio";
+            break;
+        case "K":
+            elementoQuimico="Potasio";
+            break;
+        case "H":
+            elementoQuimico="Hidrogeno";
+            break;
+    }*/
+    return simboloQuimico[simbolo]; //devuelve el nombre completo del elementoQuimico, volviendo mas conciso el codigo en lugar de usar el switch
+}
+// Muestro como usar un objeto para realizar la busqueda en switch, abajo de esta llave se puede hacer el console.log para verificarlo
+
+var ordenPizza=[{
+    "tipo":"fugazzeta",
+    "tamaño":"Grande",
+    "precio": 1320,
+    "toppings":[//objeto anidado, objeto dentro de otro objeto
+        "Muzzarella",
+        "cebolla",
+        "jamon"
+    ],
+    "Delivery": true
+},//esta forma de escritura es una arreglo de objetos o objetos complejos, parecido al formato json
+{
+    "tipo":"cuaro quesos",
+    "tamaño": "chica",
+    "precio": 980,
+    "toppings":[
+        "Muzzarella",
+        "roquefort",
+        "provoleta",
+        "queso azul"
+    ],
+    "Delivery": false
+}
+];
+console.log(ordenPizza[0]); //el indice 0 me retorna el primer objeto en este caso la primer orden de pizza
+console.log(ordenPizza[1].precio);//me devuelve el precio de la segunda orden debido al indice 1 antes de llamar a la propiedad en el console.log
+
