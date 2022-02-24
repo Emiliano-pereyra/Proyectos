@@ -226,7 +226,7 @@ var ordenPizza=[{
     "tipo":"fugazzeta",
     "tamaño":"Grande",
     "precio": 1320,
-    "toppings":[//objeto anidado, objeto dentro de otro objeto
+    "toppings":[//arreglo anidado, objeto dentro de otro objeto
         "Muzzarella",
         "cebolla",
         "jamon"
@@ -248,4 +248,25 @@ var ordenPizza=[{
 ];
 console.log(ordenPizza[0]); //el indice 0 me retorna el primer objeto en este caso la primer orden de pizza
 console.log(ordenPizza[1].precio);//me devuelve el precio de la segunda orden debido al indice 1 antes de llamar a la propiedad en el console.log
+
+
+var z=0;
+while(z<=3){//condicion
+    console.log("que onda");
+    z++;//actualizo la variable porque la estoy aumentando para que se verifique si cumple la funcion
+
+}
+
+var cosa=[];
+for (var i=0;i<10;i++){//valor de variable, condicion, actualizacion
+    cosa.push(i);
+}
+console.log(cosa);
+
+var myArray=[4,6,8,10,2];
+var total=0;
+for(var i=0; i< myArray.length;i++){//mientras que i sea menor a la longitud de mi array
+    total +=myArray[i];//arranca con el valor en el indice 0 que en este caso es 4
+}
+console.log(total);//va a mostrarme el valor total de mis valores en myArray
 
