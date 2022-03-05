@@ -270,3 +270,69 @@ for(var i=0; i< myArray.length;i++){//mientras que i sea menor a la longitud de 
 }
 console.log(total);//va a mostrarme el valor total de mis valores en myArray
 
+
+function generarFraccionAleatoria(){
+    return math.random();//genera un numero aleatorio entre 0 y 1 pero no esos valores 
+}    
+console.log(generarFraccionAleatoria);
+
+var numeroAleatorio = math.random;
+console.log(numeroAle);//genero valor decimal aleatorio entre 0 y 1
+
+var numAleatorioEntre0y19=math.floor(math.random()*20);//floor retorna el mayor numero entero que es menor o igual a su argumento numerico, lo que va entre parentesis
+//lo multiplico por 20 ya que nunca va a llegar al ese valor, va a ser su limite superior
+console.log(numAleatorioEntre0y19);
+
+function generarEnteroAleatorio(limiteSuperior) {
+    return Math.floor(Math.random()*limiteSuperior);
+    //genero un entero aleatorio entre 0 y el limite superior sin incluirlo
+}
+
+console.log(generarEnteroAleatorio(5));//genero un entero entre 0 y 5
+
+function rangoAleatorio(limiteInferior, limiteSuperior){
+    return math.floor(math.random()*(limiteSuperior-limiteInferior+1)+limiteInferior);
+}
+console.log(rangoAleatorio(3,8));//enteros aleatorios entre 3 y 8
+
+console.log(parseInt("5"))//convierto una cadena de caracteres con parseInt que representa un numero en un numero 
+//si pongo una letra en vez de un numero me tira NaN que es not a number
+console.log(parseInt("110110",2));//el 2 indica la base del numero entre comillas, en este caso indico que la base es binaria
+
+
+function retornarMinimo(x,y) {
+        return x<y? x:y; //si x < y retorna el valor luego del signo de interrogacion(x en este caso) en caso contrario retorna el que sigue a los 2 puntos (y en caso de false)
+}
+
+//VAR VS LET
+let campista="Pepe";
+let campista="Jorge";//let no me permite llamar a las variables con el mismo nombre, me retorna campista has already been declared
+//con let la variable que se define solo puede existir dentro del bloque de codigo en el que es escrita
+// en caso de 1 condicional solo puedo usarla dentro del condicional si la quiero una fuera me indica  que la variable no esta definida
+
+//CONST las variables declaradas con const no puede ser modificadas de ninguna forma
+
+const MI_CONSTANTE=10;//requiere el valor de inicializacion sino retorna initialization is required al intentar usarla
+console.log(MI_CONSTANTE);//se escribe de esta forma para que se puedan distinguir y para que otras personas sepan que no tienen que intentar modificarlo
+MI_CONSTANTE=5;//me retorna read only, porque con const la variable se detecta de esa forma
+//en caso de un arreglo si se pueden cambiar los datos internos, por ejemplo MI_ARREGLO[0]=5 reemplazo el valor 0 por 5 en el array
+
+//CREAR OBJETO INMUTABLE
+let colores={
+    "verde":"#10e40b",
+    "azul":"#1b50e0",
+    "negro":"#000000",
+    "blanco":"#ffffff"
+};
+
+object.freeze(colores);//evita que se puedan modificar las propiedas del objeto, si se intenta agregar retorna "objecto is not extensible"
+//caso de cambiar algun valor retorna "read only" error de tipo
+//al querer borrar una propiedad tira error de tipo porque ya se congelaron las propiedades
+
+
+const fecha=()=> new Date();//cree una funcion flecha, usada para utilizar funciones anonimos o sin nombre especifico
+const sumarTres=(x)=> x+3;//funcion flecha con parametro, x en este caso
+
+
+
+
