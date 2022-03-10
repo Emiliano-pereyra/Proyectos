@@ -1,0 +1,7 @@
+1)cd hasta llegar a la carpeta donde va el proyecto
+2) npx create-react-app "va el nombre que queres del proyecto sin las comillas"
+3) cd al proyecto porque te deja en la carpeta no el proyecto en si
+4) npm start
+5) Armar el proyecto y chequearlo en local:host
+6) usar babel repl, traduce el codigo html u algun otro al lenguaje de react
+7) Para exportar imagenes puedo usar html2canvas
