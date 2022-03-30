@@ -1,0 +1,175 @@
+<!-- EJERCICIO 1: MOSTRAR EN PANTALLA PHP, Java, Javascript, C y C++-->
+<!-- EJERCICIO 2: IDEM 1 PERO EN ESTE CASO MOSTRAR 1 POR LINEA-->
+<!-- EJERCICIO 3: ARMAR 2 PARRAFOS, EN EL PRIMER METER SALTOS DE LINEA -->
+<!-- EJERCICIO 4: CONFECCIONAR 1 TITULO CON h1 Y 2 SUBTITULOS CON h2 -->
+<!-- EJERCICIO 5: 4 PARRAFOS PRIMER PARRAFO ENFATIZADO AL MAXIMO Y LOS OTROS MENOR ENFATIZACIÓN -->
+<!-- EJERCICIO 6: FORMAR 1 HIPERVINCULO ENTRE 2 PAGINAS -->
+<!-- EJERCICIO 7: HIPERVINCULO A UNA PAGINA DE INTERNET CUALQUIERA -->
+<!-- EJERCICIO 8: HIPERVINCULO A UN CLIENTE DE CORREO -->
+<!-- EJERCICIO 9: 4 ANCLAS CON SUS HIPERVINCULAS A ESTOS -->
+<!-- EJERCICIO 10: IMPLEMENTAR UNA PAGINA QUE MUESTRE UNA IMAGEN QUE SE ENCUENTRA EN EL MISMO SERVIDOR Y MISMA CARPETA QUE EL ARCHIVO HTML -->
+<!-- EJERCICIO 11: HACER UN HIPERVINCULO A OTRAS 2 PAGINAS QUE EN ELLAS ESTEN 2 IMAGENES DIFERENTES Y EL HIPERVINCULO A LA PRINCIPAL -->
+<!-- EJERCICIO 12: HACER UNA LISTA ORDENADA -->
+<!-- EJERCICIOS 13: HACER UNA LISTA NO ORDENADA -->
+<!-- EJERCICIO 14: ARMAR UNA LISTA Y ASIGNARLE HIPERVINCULOS PARA EL TEMA DE DICHA LISTA -->
+<!-- EJERCICIO 15: ARMAR 1 TABLA -->
+<!-- EJERCICIO 16: ARMAR UNA TABLA CON 1 CELDA QUE TENGA PUESTO UN TITULO SOLO QUE ABARQUE AL RESTO -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    PHP-Javascript-Java-C-C++<br> <!--EJERCICIO 1 LISTO-->
+    
+    <!--Inicio ejercicio 2-->
+    PHP<br>
+    JavaScript<br>
+    Java<br>
+    C<br>
+    C++<br>
+    <!-- FIN EJERCICIO 2 -->
+
+    <!-- Inicio EJERCICIO 3 -->
+    <p>SQL es algo que sirve para cosas<br>y para descargar datos de otras cosas<br></p>
+    <p>Este es el segundo parrafo que lo uso para rellenar</p>
+    <!-- FIN EJERCICIO 3 -->
+
+    <!-- INICIO EJERCICIO 4 -->
+    <h1>Que loco todo</h1>
+    <h2>bastante loco</h2>
+    <p>Este es el parrafo del primer subtitulo <br></p>
+    <h2>demasiado loco</h2>
+    <p>parrafo del segundo subtitulo</p>
+    <!-- FIN EJERCICIO 4 -->
+
+    <!-- INICIO EJERCICIO 5 -->
+    <p><strong>BASE DE DATOS</strong> MySQL</p>
+    <p><em>TEXTO</em> Es un sistema bastante utilizado debido a su sumplicidad</p>
+    <p><em>TABLAS</em>En este se pueden utilizar tablas para almacenar los diferentes datos de la empresa, por ejemplo usuarios de una pagina web</p>
+    <p><em>Comandos</em>En MySQL se pueden encontrar diferentes comandos con los que podemos realizar diferentes cambios en estas tablas con los datos almacenados</p>
+    <!-- FIN EJERCICIO 5 -->
+
+    <!-- INICIO EJERCICIO 6 -->
+    <h1>Vinculo a pagina 2</h1>
+    <a href="pagina 2.html">Pagina 2</a>
+    <!-- FIN PAGINA 2 -->
+
+    <!-- INICIO EJERCICIO 7 -->
+    <h1>Vinculo a Wikipedia</h1>
+    <a href="https://es.wikipedia.org/wiki/Wikipedia:Portada">Wikipedia</a>
+    <!-- FIN EJERCICIO 7 -->
+
+    <!-- INICIO EJERCICIO 8 -->
+    <h1>Vinculo a cuadro de correo</h1>
+    <a href="mailto:emi.pere@hotmail.com">ENVIAR MAIL</a>
+     <!-- mailto me va a enviar a mi programa predeterminado para enviar mail, caso normal es outlook que viene con windows -->
+    <!-- FIN EJERCICIO 8 -->
+
+    <!-- INICIO EJERCICIO 9 -->
+    <h1>PARA LA NAVEGACION EN UNA SOLA PAGINA, POR EJEMPLO</h1>
+    <a href="#Inicio">Inicio</a> <!-- EL SIMBOLO # HACE REFERENCIA LA PALABRA CLAVE DE LA VINCULACION, EN ESTE CASO USE INICIO POR ENDE DONDE VUELVA A USAR ESE VINCULO VA A SER DONDE SE REDIRECCIONE ESTA OPCION -->
+    <a href="#Lista">Listado</a><!-- NO ES NECESARIO QUE EL NOMBRE CON EL QUE SALGA LA OPCION SEA EL MISMO AL QUE PONES EN href-->
+    <a href="#imagen">Imagenes</a><!-- NO ES MUY RECOMENDABLE USAR IMG PARA href PORQUE HAY UN COMANDO QUE JUSTAMENTE SE LLAMA img-->
+    <a href="#descripcion">Explicacion</a><!-- NO CONVIENE MODIFICAR COMPLETAMENTE LA PALABRA PARA SIMPLESA EN CUANTO AL ARMADO Y EN CASO QUE OTRO LO REVISE LE SEA MAS FACIL HACERLO-->
+    
+    <a name="Inicio"></a> <!-- EL ATRIBUTO name LO USO PARA EL VINCULO ECHO ANTES EN ESTE CASO, VA ESCRITO SIN EL #-->
+    <h2>Inicio de la pagina</h2>
+    <p>te trasladaste al incio de la pagina, aunque no lo parezca</p>
+
+    <a name="Lista"></a>
+    <h2>Lista</h2>
+    <p>Traslado a lista</p>
+
+    <a name="imagen"></a>
+    <h2>Imagenes</h2>
+    <p>Traslado a imagenes</p>
+
+    <a name="descripcion"></a>
+    <h2>Aca esta la explicacion</h2>
+    <p>Trasladado a descripcion a traves de los hipervinculos echos antes</p>
+    <!-- FIN EJERCICIO 9 -->
+
+    <!-- INICIO EJERCICIO 10 -->
+    <img src="wtf.jpg" alt="Foto bizarra"> <!-- src ES PARA REFERIRSE A LA UBICACION DEL ARCHIVO DESEADO, COMO ESTOY EN img Y TENGO LA FOTO EN LA MISMA UBICACION, CON PONER EL NOMBRE Y FORMATO DE LA IMAGEN QUEDA LISTO -->
+    <!-- alt ES PARA DARLE OTRO NOMBRE QUE USAR PARA REFERIRSE AL ARCHIVO INTRODUCIDO, DA OTRA OPCION EN LUGAR DE USAR CONSTANTEMENTE wtf.jpg (ES MAS COMUN USAR EL NOMBRE DE LA FOTO Y EL FORMATO IGUALMENTE PARA INTRODUCIR ARCHIVOS) -->
+    <!-- FIN EJERCICIO 10 -->
+
+    <!-- INICIO EJERCICIO 11 -->
+    <h1>Vinculos ejercicio 11</h1>
+    <a href="pagina 2.html">Vinculo a pagina 2</a>
+    <a href="pagina 3.html">Vinculo a pagina 3</a>
+    <!-- FIN EJERCICIO 11 -->
+
+    <!-- INICIO EJERCICIO 12 -->
+    <h1>LISTA ORDENADA</h1>
+    <ol><!-- ol SE USA PARA HACER LISTAS ORDENAS NUMERADAS-->
+        <li>Pedro</li><!-- li ES PARA INTRODUCIR LOS ELEMENTOS DE LA LISTA-->
+        <li>Pedra</li>
+        <li>Padre</li>
+    </ol>
+    <!-- FIN EJERCICIO 12 -->
+
+    <!-- INICIO EJERCICIO 13 -->
+    <h1>LISTA NO ORDENADA</h1>
+    <ul><!-- ul ES PARA ARMAR UNA LISTA NO ORDENADA-->
+        <li>C</li>
+        <li>C++</li>
+        <li>PHP</li>
+    </ul>
+    <!-- FIN EJERCICIO 13 -->
+
+    <!-- INICIO EJERCICIO 14 -->
+    <h1>LISTA DE PAGINAS DE VENTA</h1>
+    <ol>
+        <li>Maximus
+            <ul>
+        <li><a href="https://www.maximus.com.ar/">Pagina de Maximus</a></li></ul>
+        </li>
+
+        <li>Compragamer
+            <ul>
+            <li><a href="https://compragamer.com/index.php">Pagina de compragamer</a></li>
+        </ul>
+        </li>
+
+    </ol>
+    <!-- FIN EJERCICIO 14 -->
+
+    <!-- INICIO EJERCICIO 15 -->
+    <h1>Armado de 1 tabla</h1>
+    <table order="1">
+        <caption>Poblacion</caption><tr>
+            <th>localidad</th><th>Cantidad de habitantes</th>
+        </tr>
+        <tr>
+            <td>China</td><td>1300 millones</td>
+        </tr>
+        <tr>
+            <td>India</td><td>1800 millones</td>
+        </tr>
+    </table>
+
+    <!-- FIN EJERCICIO 15 -->
+
+    <!-- INICIO EJERCICIO 16 -->
+    <h1>Otra tabla</h1>
+    <table order="1">
+        <tr>
+            <th rowspan="3">Recursos</th><th colspan="3">Facturacion</th>
+        </tr>
+        <tr>
+        <td>Discos duros</td><td>23000</td><td>25000</td>
+    </tr>
+    <tr>
+        <td>cpu</td><td>50000</td><td>80000</td>
+    </tr>
+    </table>
+
+    <!-- FIN EJERCICIO 16 -->
+
+</body>
+</html>
