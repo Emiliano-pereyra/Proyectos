@@ -1,0 +1,147 @@
+*
+{ /* el simbolo "*" engloba todos los elementos del DOM */
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+section{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: black;
+}
+
+.recipiente{ /* armo un recipiente circular porque soy jodido*/
+    position:relative;
+    width: 300px;
+    height: 300px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 50%; 
+    border: 8px solid transparent;
+    transform-origin: bottom center; /* para que en la animacion no solo se tambalee, tambien se desplaza hacia los costados*/
+    animation: animate 5s linear infinite; /*si quiero animarlo uso esta linea*/
+    
+}
+@keyframes animate {
+    0%
+    {
+        filter: hue-rotate(0deg); /* deg es para grados */
+        transform: rotate(0deg); /* posicion inicial */
+    }
+    25%
+    {
+        transform: rotate(15deg); /*animacion que tambalea a la derecha*/
+    }
+    
+    50%
+    {
+        transform: rotate(0deg); /* posicion inical */
+    }
+    
+    75%
+    {
+        transform: rotate(-15deg); /* tambalea hacia ambos de esta forma*/
+    }
+    100%
+    {
+        filter: hue-rotate(360deg); /* con hue-rotate voy a cambiar los colores de liquido constantemente*/
+        transform: rotate(0deg); /* posicion inicial */
+    
+    }
+    /* puse hue-rotate de esta forma para que no esten cambiando los colores tan rapido*/
+    
+    
+}
+
+.recipiente::before{ /* lo uso para la boca del recipiente, cargo primero el contenido por el before*/
+    content: '';
+    position: absolute;
+    top:-15px;
+    left: 50%;
+    transform: translateX(-50%); /* desplazo el elemento a lo largo del eje X */
+    width: 40%;
+    height: 30px;
+    border: 15px solid #222; /* estas 3 ultimas lineas le dan la boca a la botella*/
+    border-radius: 50%; /* si cambio el radio del que puse primero, queda separado de recipiente*/
+    box-shadow: 0 10px #222;
+}
+
+.recipiente::after{
+    content: ''; /* toma el contenido de recipiente al ponerlo de esta forma*/
+    position: absolute; /* para ubicarlo en la misma posicion que su elemento padre inicial */
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%); /* translate mueve el elemento en hasta 3 coordenadas diferentes (x,y,z)*/
+    /* acomodo el cuadrado mas claro con las propiedades anteriores */
+    border-radius: 50%; /* el cuadrado echo antes lo transforme en una circunferencia con el mismo radio*/
+    width: 150px;
+    height: 80px;
+    background: rgba(255,255,255,0.1);
+}
+
+.liquido{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+    background: rgb(151, 231, 23);
+    border-bottom-left-radius: 150px;
+    border-bottom-right-radius: 150px; /* igual al width que puse en recipiente::after porque sino queda horrible si pongo menos, si pongo mas no afecta en nada mientras que sean iguales los valores*/
+    filter: drop-shadow(0 0 80px rgb(32, 226, 32)); /* drop-shadow lo use para iluminar el liquido*/
+    /* las siguientes lineas son si se quiere mover el liquido tambien, no solo el recipiente*/
+    transform-origin: top center; /* probado que bottom no funciona aca, se desplaza exactamente igual que antes de poner las lineas en liquido */
+    animation: animateliquido 5s linear infinite;
+
+}
+@keyframes animateliquido{
+    0% 
+    {
+       transform: rotate(0deg);
+    }
+    25% 
+    {
+        transform: rotate(-25deg);
+    }
+    50% 
+    {
+        transform: rotate(0deg);
+    }
+    75% 
+    {
+        transform: rotate(25deg);
+    }
+    100% 
+    {
+        transform: rotate(0deg);
+    }
+}
+
+/* ARMO LA PARTE SUPERIOR DE LIQUIDO*/
+.liquido::before{ 
+    content:'';
+    position: absolute;
+    top: -10px;
+    width: 100%;
+    height: 20px;
+    background: rgb(3, 59, 20);
+    border-radius: 50%;
+    filter: drop-shadow(0 0 80px rgb(45, 167, 45));
+}
+
+.sombra{ /* LA DEL RECIPIENTE*/
+    position:absolute;
+    top: calc(50% + 150px); /* sino agrego calc para sumarlo, queda un circulo debajo del recipiente nada mas, no como una sombra*/
+    left: 50%;
+    transform: translate(-50%, 50%);
+    width: 300px;
+    height: 30px; /* si pongo los 300px voy al limite de lo que ocuparia mi background */
+    background: rgba(37, 30, 30, 0.5);   
+    border-radius: 50%;
+  
+}
+
+
+
