@@ -55,7 +55,7 @@ var mensaje = "estoy cagandola en " + verbo; //va a interpretar progamar en "ver
 var mensajeCompleto = "fafa buena ";
 var parteFinal = "si señor";
 console.log(mensajeCompleto);
-mensajeCompleto += parteFinal; //va a mostrar el mensaje compelto de esta forma
+mensajeCompleto += parteFinal; //va a mostrar el mensaje completo de esta forma
 
 //longitud de cadena de caracteres
 
@@ -306,7 +306,7 @@ function retornarMinimo(x,y) {
 
 //VAR VS LET
 let campista="Pepe";
-let campista="Jorge";//let no me permite llamar a las variables con el mismo nombre, me retorna campista has already been declared
+let Campista="Jorge";//let no me permite llamar a las variables con el mismo nombre, me retorna campista has already been declared
 //con let la variable que se define solo puede existir dentro del bloque de codigo en el que es escrita
 // en caso de 1 condicional solo puedo usarla dentro del condicional si la quiero una fuera me indica  que la variable no esta definida
 

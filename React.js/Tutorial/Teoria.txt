@@ -1,0 +1,63 @@
+React.js: es una biblioteca de javascript de código abierto diseñada para crear interfaces de usuario
+
+CONCEPTOS BÁSICOS:
+
+1) Un componente es una parte de la interfaz de usuario que es independiente y reusable, cada componente va a tener un cierto estado y una funcionalidad reutilisable
+2) Hay 2 tipos de componentes principales: funcionales y de clase
+3) Componen funcional: función de Javascript/ES6 que retorna un elemento de React(JSX).
+4) Algunas de las características importantes de los componentes funcionales:
+- Debe retornar un elemento de React(JSX), JSX es una mezcla con HTML.
+- Debe comenzar con una letra mayúscula el nombre asignado a la función. 
+- Puede recibir valores si es necesario.
+Ejemplo:
+
+function Saludo(props){
+    return <h1>!Hola, {props.nombre}¡</h1>; 
+}
+- Los props solo pueden ser enviados de "padre a hijo"
+
+5) Un componente de clase es básicmante una clase de ES6 (Javascript moderno) que retorna un elemento de JSX.
+Ejemplo de un componente de clase:
+
+class Saludo extends React.Component{
+    render(){
+        return <h1> Hola, {this.props.nombre}<h1>;
+    }
+}
+
+-Se puede ver que utiliza la palabra clave class
+-React.Component se agrega para que adquiera todas las propiedades pertenecientes a React
+-render se utiliza para poder retornar el elemento JSX que se quiera usar
+- this se refiere a un componente en específico y se tiene que usar cuando se quiere utilizar algun valor en específico
+
+6) Características mas importantes de un componente de clase:
+-Debe extender React.Component
+-Debe tener un método render() para retornar un elemento de JSX.
+-Puede recibir valores si es necesario.
+
+7) Estado (state): Representación de Javascript del conjunto de propiedades de un componente y sus valores actuales, estas propiedades se van a poder modificar.
+8) Los componentes de clase se usaban anteriormente para poder trabajar con "estados" de nuestros componentes, porque con los componentes funcionales no se podía hasta que se incluyeon los hooks.
+9) Los hooks permiten agregarle un cierto estado a los componentes funcionales, sin escribir un componenete de clase
+10) Event Listener: función de Javascript que es ejecutada cuando ocurre un evento específico
+11) JSX es una extensión de React para la sintaxis de Javascript,permite describir en Javascript como se verán los componentes usando una estructura similar a HTML, es opcional
+12) Ventajas de JSX:
+-Estructura mas fácil de visualizar
+-Errores y advertencias más útiles
+Ejemplo:
+
+const elemento = <h1> hola </h1>;
+
+13) Los componentes en React están compuestos de elementos, el componente va a tener la presentación echa con parametros HTML o puede crear o renderizar otros componentes al mismo tiempo.
+14) React DOM: paquete que facilita la interacción y actualización del DOM en aplicaciones de React.
+15) DOM: Document Object Model, representación en el navegador de todos lo elementos que conforman una página o aplicación web.
+16) Elementos: son las unidades más basicas en cualquier estructura.
+17) Con JSX se puede usar cualquier elemento HTML.
+18) En JSX los elementos HTML se representan con etiquetas en minúscula.
+19) Los componentes definidos por el usuario siempre comienzan por una letra mayúscula.
+20) Atributos, pueden agregarse a los elementos JSX para especificar ciertas características, no todos se escriben de la misma forma.
+Ejemplo:
+
+class se usa en HTML pero en JSX se escribe como className
+style acepta un objeto Javascript con propiedades CSS escritas en camelCase, ej: background-image en Html se escribe como backgroundImage en JSX.
+
+
